@@ -5,6 +5,8 @@
  */
 package fact.it.www;
 
+import fact.it.www.beans.Bezoeker;
+import fact.it.www.beans.Personeelslid;
 import fact.it.www.beans.Persoon;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -36,6 +38,10 @@ public class ManageServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             Persoon persoon = new Persoon("Yori", "Verbist");
+            Personeelslid personeelslid1 = new Personeelslid("Jakke", "Turbo");
+            Personeelslid personeelslid2 = new Personeelslid("Jos", "Janssens");
+            Bezoeker bezoeker1 = new Bezoeker("Elon", "Musk");
+            Bezoeker bezoeker2 = new Bezoeker("Jef", "Bezos");
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
@@ -43,7 +49,11 @@ public class ManageServlet extends HttpServlet {
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Servlet ManageServlet at " + request.getContextPath() + "</h1>");
-            out.println("<p>" persoon.toString() + "<p>");
+            out.println("<p>" + persoon.toString() + "<p>");
+            out.println("<p>" + bezoeker1.toString() + "<p>");
+            out.println("<p>" + bezoeker2.toString() + "<p>");
+            out.println("<p>" + personeelslid1.toString() + "<p>");
+            out.println("<p>" + personeelslid2.toString() + "<p>");
             out.println("</body>");
             out.println("</html>");
         }
