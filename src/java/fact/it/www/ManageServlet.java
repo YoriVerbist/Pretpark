@@ -5,9 +5,11 @@
  */
 package fact.it.www;
 
+import fact.it.www.beans.Attractie;
 import fact.it.www.beans.Bezoeker;
 import fact.it.www.beans.Personeelslid;
 import fact.it.www.beans.Persoon;
+import fact.it.www.beans.Pretpark;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -42,6 +44,13 @@ public class ManageServlet extends HttpServlet {
             Personeelslid personeelslid2 = new Personeelslid("Jos", "Janssens");
             Bezoeker bezoeker1 = new Bezoeker("Elon", "Musk");
             Bezoeker bezoeker2 = new Bezoeker("Jef", "Bezos");
+            Pretpark pretpark = new Pretpark("Euro Disney");
+            Attractie attractie1 = new Attractie("Typhoon");
+            Attractie attractie2 = new Attractie("Sledgehammer");
+            Attractie attractie3 = new Attractie("Dreamcatcher");
+            pretpark.voegAttractieToe(attractie1);
+            pretpark.voegAttractieToe(attractie2);
+            pretpark.voegAttractieToe(attractie3);
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
@@ -54,6 +63,10 @@ public class ManageServlet extends HttpServlet {
             out.println("<p>" + bezoeker2.toString() + "<p>");
             out.println("<p>" + personeelslid1.toString() + "<p>");
             out.println("<p>" + personeelslid2.toString() + "<p>");
+            out.println("<p>" + pretpark.getNaam() + "<p>");
+            out.println("<p>" + attractie1.getNaam() + "<p>");
+            out.println("<p>" + attractie2.getNaam() + "<p>");
+            out.println("<p>" + attractie3.getNaam()+ "<p>");
             out.println("</body>");
             out.println("</html>");
         }
