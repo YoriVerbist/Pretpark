@@ -1,44 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6bf6938b-af91-4b92-8486-dbc770db3053" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/build.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/test/classes/.netbeans_automatic_build" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/test/classes/.netbeans_update_resources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/test/classes/fact/it/www/beans/AttractieTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/test/classes/fact/it/www/beans/BezoekerTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/test/classes/fact/it/www/beans/PersoneelslidTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/test/classes/fact/it/www/beans/PersoonTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/test/classes/fact/it/www/beans/PretparkTest.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/web/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/.netbeans_automatic_build" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/.netbeans_update_resources" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/fact/it/www/ManageServlet.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/fact/it/www/beans/Bezoeker.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/fact/it/www/beans/Personeelslid.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/web/WEB-INF/classes/fact/it/www/beans/Persoon.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/web/WEB-INF/glassfish-web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/web/gfv3ee6.dpf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/web/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nbproject/ant-deploy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nbproject/build-impl.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nbproject/genfiles.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nbproject/private/private.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nbproject/private/private.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nbproject/project.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/nbproject/project.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/conf/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/fact/it/www/ManageServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/fact/it/www/beans/Bezoeker.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/fact/it/www/beans/Personeelslid.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/java/fact/it/www/beans/Persoon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/fact/it/www/beans/AttractieTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/fact/it/www/beans/BezoekerTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/fact/it/www/beans/PersoneelslidTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/fact/it/www/beans/PersoonTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/test/fact/it/www/beans/PretparkTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/index.html" afterDir="false" />
-    </list>
+    <list default="true" id="6bf6938b-af91-4b92-8486-dbc770db3053" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,8 +38,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -138,13 +99,15 @@
           <select />
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
     <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1557341721655" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../gielis_arno_r0714654 _spellen" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="project.structure.last.edited" value="SDKs" />
@@ -348,16 +311,17 @@
       <workItem from="1557133343535" duration="1439000" />
       <workItem from="1557228459887" duration="2779000" />
       <workItem from="1557341715460" duration="70000" />
+      <workItem from="1557406667864" duration="30000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4288000" />
+    <option name="totallyTimeSpent" value="4318000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1928" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2553305" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25799572" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
