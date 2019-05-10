@@ -1,7 +1,7 @@
 <%-- 
     Document   : Verwelkoming
     Created on : May 10, 2019, 6:32:10 PM
-    Author     : Yori
+    Author     : Yori Verbist
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -15,7 +15,7 @@
     </head>
     <body>
         <div class="container">
-            <h1>Hello World!</h1>
+            <h1>Welkom, <%=Bezoeker. %></h1>
         </div>
     </body>
 </html>

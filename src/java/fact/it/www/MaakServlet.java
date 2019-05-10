@@ -43,9 +43,9 @@ public class MaakServlet extends HttpServlet {
                 bezoeker.setPretparkcode(1000);
             }
        
-        RequestDispatcher rd = request.getRequestDispatcher("bezoeker.jsp");
-            request.setAttribute("bezoeker", bezoeker);
-            rd.forward(request, response);
+        RequestDispatcher rd = request.getRequestDispatcher("Formulier.jsp");
+        request.setAttribute("bezoeker", bezoeker);
+        rd.forward(request, response);
         
      
     }
