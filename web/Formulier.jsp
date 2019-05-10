@@ -14,7 +14,18 @@
     </head>
     <body>
         <div class="container">
-        <h1>Hello World!</h1>
+        <h1>Formulier</h1>
+        <form action="../src/java/fact/it/www/MaakServlet.java"> 
+            <div class="form-group"> 
+                <label for="voornaam">Voornaam</label> 
+                <input class="form-control" id="voornaam" placeholder="Elon"> 
+            </div> 
+            <div class="form-group"> 
+                <label for="achternaam">Achternaam</label> 
+                <input class="form-control" id="achternaam" placeholder="Musk"> 
+            </div> 
+        </form>
+        <button type="button" class="btn btn-outline-info"><a href="index.jsp">Home Pagina</a></button>
         </div>
     </body>
 </html>
