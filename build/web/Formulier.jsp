@@ -24,6 +24,10 @@
                 <label for="achternaam">Achternaam</label> 
                 <input class="form-control" id="achternaam" placeholder="Musk"> 
             </div> 
+            <div class="form-group form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Ben je al eens in dit pretpark geweest?</label>
+            </div>
         </form>
         <button type="button" class="btn btn-outline-info"><a href="index.jsp">Home Pagina</a></button>
         </div>
