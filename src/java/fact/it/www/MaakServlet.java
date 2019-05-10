@@ -46,7 +46,7 @@ public class MaakServlet extends HttpServlet {
         RequestDispatcher rd = request.getRequestDispatcher("bezoeker.jsp");
             request.setAttribute("bezoeker", bezoeker);
             rd.forward(request, response);
-        }
+        
      
     }
 
