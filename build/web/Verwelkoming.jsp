@@ -4,6 +4,7 @@
     Author     : Yori Verbist
 --%>
 
+<%@page import="fact.it.www.beans.Bezoeker"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,8 +15,21 @@
 
     </head>
     <body>
+        
+
         <div class="container">
-            <h1>Welkom, <%=Bezoeker. %></h1>
+              <%Bezoeker bezoeker = (Bezoeker)request.getAttribute("bezoeker");
+            int pretparkcode = bezoeker.getPretparkcode();
+            if (pretparkcode == 1000) {
+                %><p>Welkom <%=bezoeker.toString()%>, danku om u te registreren.</p><%}
+            else {
+                %><p>Welkom terug <%=bezoeker.toString()%>.</p><%
+                };
+            %>
+
+            <button type="button" class="btn btn-outline-info"><a href="Formulier.jsp">Formulier</a></button>
+            <button type="button" class="btn btn-outline-info"><a href="index.jsp">Home Pagina</a></button>
         </div>
+        
     </body>
 </html>

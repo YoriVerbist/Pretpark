@@ -36,14 +36,15 @@ public class MaakServlet extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         String voornaam = request.getParameter("voornaam");
         String achternaam = request.getParameter("achternaam");
+        String nieuweBezoeker = request.getParameter("nieuwe_bezoeker");
         
         Bezoeker bezoeker = new Bezoeker (voornaam, achternaam);
         
-        if (request.getParameter("nieuwe_bezoeker") == null) {
-                bezoeker.setPretparkcode(1000);
-            }
+        if (nieuweBezoeker == null) {
+            bezoeker.setPretparkcode(1000);
+        }
        
-        RequestDispatcher rd = request.getRequestDispatcher("Formulier.jsp");
+        RequestDispatcher rd = request.getRequestDispatcher("Verwelkoming.jsp");
         request.setAttribute("bezoeker", bezoeker);
         rd.forward(request, response);
         

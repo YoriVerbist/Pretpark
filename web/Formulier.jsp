@@ -25,10 +25,10 @@
                 <input class="form-control" id="achternaam" placeholder="Musk" name="achternaam"> 
             </div> 
             <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="nieuwe_bezoeker" name="nieuwe_gebruiker">
+                <input type="checkbox" class="form-check-input" id="nieuwe_bezoeker" name="nieuwe_bezoeker">
               <label class="form-check-label" for="nieuwe_bezoeker">Ben je al eens in dit pretpark geweest?</label>
             </div>
-              <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary" name="verwelkoming">Submit</button>
         </form>
         <button type="button" class="btn btn-outline-info"><a href="index.jsp">Home Pagina</a></button>
         </div>
