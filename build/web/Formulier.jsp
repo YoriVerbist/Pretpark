@@ -28,7 +28,19 @@
                 <input type="checkbox" class="form-check-input" id="nieuwe_bezoeker" name="nieuwe_bezoeker">
               <label class="form-check-label" for="nieuwe_bezoeker">Ben je al eens in dit pretpark geweest?</label>
             </div>
+            <div class="from-group">
+            <p>
+                <label class="form-check-label" for="attractie">Wat is je favoriete attractie?</label>
+                <select name="attractie" id="attractie" >
+                <%String[] attracties = {"Geen", "Screaming Eagle", "Fury", "Dreamcather"};
+                     for (int j = 0; j < attracties.length; j++) {%>
+                    <option value= "<%=attracties[j]%>"><%=attracties[j]%></option>
+                <%}%>
+                </select>
+            </p>
+            </div>
             <button type="submit" class="btn btn-primary" name="verwelkoming">Submit</button>
+            
         </form>
         <button type="button" class="btn btn-outline-info"><a href="index.jsp">Home Pagina</a></button>
         </div>

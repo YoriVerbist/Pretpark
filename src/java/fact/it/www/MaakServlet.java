@@ -37,15 +37,21 @@ public class MaakServlet extends HttpServlet {
         String voornaam = request.getParameter("voornaam");
         String achternaam = request.getParameter("achternaam");
         String nieuweBezoeker = request.getParameter("nieuwe_bezoeker");
+        String attractie = request.getParameter("attractie");
         
         Bezoeker bezoeker = new Bezoeker (voornaam, achternaam);
         
         if (nieuweBezoeker == null) {
             bezoeker.setPretparkcode(1000);
         }
+        
+        if (!attractie.equals("Geen")) {
+            bezoeker.voegToeAanWishlist(attractie);
+        }
        
         RequestDispatcher rd = request.getRequestDispatcher("Verwelkoming.jsp");
         request.setAttribute("bezoeker", bezoeker);
+        request.setAttribute("attractie", attractie);
         rd.forward(request, response);
         
      

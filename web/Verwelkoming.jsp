@@ -4,6 +4,7 @@
     Author     : Yori Verbist
 --%>
 
+<%@page import="fact.it.www.beans.Attractie"%>
 <%@page import="fact.it.www.beans.Bezoeker"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -26,7 +27,14 @@
                 %><p>Welkom terug <%=bezoeker.toString()%>.</p><%
                 };
             %>
-
+            
+            <%
+            if(!bezoeker.getWishlist().isEmpty()){
+                %><p>Uw favoriete attractie is <%=bezoeker.getWishlist().get(0)%>.</p><%}
+            else{
+               %><p>Je hebt geen favoriete attractie gekozen.</p><%};
+            %>
+            
             <button type="button" class="btn btn-outline-info"><a href="Formulier.jsp">Formulier</a></button>
             <button type="button" class="btn btn-outline-info"><a href="index.jsp">Home Pagina</a></button>
         </div>
