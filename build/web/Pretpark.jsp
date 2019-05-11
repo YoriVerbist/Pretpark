@@ -9,19 +9,19 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Nieuw pretpark</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
         <div class="container jumbotron">
             <h1>Voeg hier een nieuw pretpark toe:</h1>
-            <form action="MaakServlet">
+            <form action="Attractie.jsp">
                 <p style="display: none;">
                     <input name="type" id="type" value="pretpark">
                 </p>
             <div class="form-group"> 
-                <label for="nieuwePretpark">Nieuw pretpark</label> 
-                <input class="form-control" id="nieuwPretpark" placeholder="Timmyland" name="nieuwPretpark"> 
+                <label for="nieuwPretpark">Nieuw pretpark</label> 
+                <input class="form-control" type="text" id="nieuwPretpark" placeholder="Timmyland" name="nieuwPretpark"> 
             </div> 
 
             <button type="submit" class="btn btn-primary" name="attractie">Submit</button>

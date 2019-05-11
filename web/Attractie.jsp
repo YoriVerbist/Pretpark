@@ -4,6 +4,7 @@
     Author     : Yori
 --%>
 
+<%@page import="fact.it.www.beans.Pretpark"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -14,7 +15,32 @@
     </head>
     <body>
         <div class="container jumbotron">
+           
+            <% String nieuwPretpark = request.getParameter("nieuwPretpark"); %>
+            <h1>Welkom bij pretpark <%=nieuwPretpark %>.</h1>
+            
+            <form action="MaakServlet">
+                <p style="display: none;">
+                    <input name="type" id="type" value="attractie">
+                </p>
+                <div class="form-group"> 
+                    <label for="naamAttractie">Naam voor de attractie:</label> 
+                    <input class="form-control" id="naamAttractie" placeholder="Typhoon" name="naamAttractie"> 
+                </div> 
+                <div class="form-group"> 
+                    <label for="duurAttractie">Duur:</label> 
+                    <input class="form-control" type="number" min="1" max="20" id="duurAttractie" name="duurAttractie" placeholder="1"> 
+                </div> 
+                <div class="form-group"> 
+                    <label for="naamFotoBestand">Fotot bestand </label> 
+                    <input class="form-control" id="naamFotoBestand" placeholder="Foto.jpg" name="naamFotoBestand"> 
+                </div> 
 
+
+            <button type="submit" class="btn btn-primary" name="attractie">Submit</button>
+            
+            </form>
+            <button type="button" class="btn btn-outline-info"><a href="index.jsp">Home Pagina</a></button>
         </div>
     </body>
 </html>

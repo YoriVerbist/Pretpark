@@ -6,6 +6,7 @@
 package fact.it.www;
 
 import fact.it.www.beans.Bezoeker;
+import fact.it.www.beans.Pretpark;
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -58,7 +59,8 @@ public class MaakServlet extends HttpServlet {
             rd.forward(request, response);
         }
         else if(type.equals("pretpark")){
-            String pretpark = request.getParameter("pretpark");
+            String nieuwPretpark = request.getParameter("nieuwPretpark");
+            Pretpark pretpark = new Pretpark(nieuwPretpark);
             
             RequestDispatcher rd = request.getRequestDispatcher("Attractie.jsp");
             request.setAttribute("pretpark", pretpark);
