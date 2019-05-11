@@ -37,10 +37,10 @@ public class MaakServlet extends HttpServlet {
         
         String type = request.getParameter("type");
         if(type.equals("bezoeker")){
-        String voornaam = request.getParameter("voornaam");
-        String achternaam = request.getParameter("achternaam");
-        String nieuweBezoeker = request.getParameter("nieuwe_bezoeker");
-        String attractie = request.getParameter("attractie");
+            String voornaam = request.getParameter("voornaam");
+            String achternaam = request.getParameter("achternaam");
+            String nieuweBezoeker = request.getParameter("nieuwe_bezoeker");
+            String attractie = request.getParameter("attractie");
         
             Bezoeker bezoeker = new Bezoeker (voornaam, achternaam);
 
@@ -55,6 +55,13 @@ public class MaakServlet extends HttpServlet {
             RequestDispatcher rd = request.getRequestDispatcher("Verwelkoming.jsp");
             request.setAttribute("bezoeker", bezoeker);
             request.setAttribute("attractie", attractie);
+            rd.forward(request, response);
+        }
+        else if(type.equals("pretpark")){
+            String pretpark = request.getParameter("pretpark");
+            
+            RequestDispatcher rd = request.getRequestDispatcher("Attractie.jsp");
+            request.setAttribute("pretpark", pretpark);
             rd.forward(request, response);
         }
     }

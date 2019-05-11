@@ -18,7 +18,7 @@
     <body>
         
 
-        <div class="container">
+        <div class="container jumbotron">
               <%Bezoeker bezoeker = (Bezoeker)request.getAttribute("bezoeker");%>
             <%int pretparkcode = bezoeker.getPretparkcode();%>
             <%if (pretparkcode == 1000) {%>
