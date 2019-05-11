@@ -24,6 +24,10 @@
                     <input name="type" id="type" value="attractie">
                 </p>
                 <div class="form-group"> 
+                    <label for="nieuwPretpark">Naam van het pretpark:</label> 
+                    <input class="form-control" id="nieuwPretpark" value="<%=nieuwPretpark %>" name="nieuwPretpark" readonly> 
+                </div> 
+                <div class="form-group"> 
                     <label for="naamAttractie">Naam voor de attractie:</label> 
                     <input class="form-control" id="naamAttractie" placeholder="Typhoon" name="naamAttractie"> 
                 </div> 

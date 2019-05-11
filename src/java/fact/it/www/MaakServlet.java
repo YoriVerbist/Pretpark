@@ -5,6 +5,7 @@
  */
 package fact.it.www;
 
+import fact.it.www.beans.Attractie;
 import fact.it.www.beans.Bezoeker;
 import fact.it.www.beans.Pretpark;
 import java.io.IOException;
@@ -58,11 +59,18 @@ public class MaakServlet extends HttpServlet {
             request.setAttribute("attractie", attractie);
             rd.forward(request, response);
         }
-        else if(type.equals("pretpark")){
+        else if(type.equals("attractie")){
             String nieuwPretpark = request.getParameter("nieuwPretpark");
-            Pretpark pretpark = new Pretpark(nieuwPretpark);
+            String naamAttractie = request.getParameter("naamAttractie");
+            String duurAttractieString = request.getParameter("duurAttractie");
+            String naamFotoBestand = request.getParameter("naamFotoBestand");
+            long duurAttractie = Long.parseLong(duurAttractieString);
             
-            RequestDispatcher rd = request.getRequestDispatcher("Attractie.jsp");
+            Pretpark pretpark = new Pretpark(nieuwPretpark);
+            Attractie attractie = new Attractie(naamAttractie, duurAttractie);
+            attractie.setFoto(naamFotoBestand);
+            
+            RequestDispatcher rd = request.getRequestDispatcher("OverzichtAttractie.jsp");
             request.setAttribute("pretpark", pretpark);
             rd.forward(request, response);
         }
