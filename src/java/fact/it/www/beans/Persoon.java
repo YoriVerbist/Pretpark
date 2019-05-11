@@ -36,6 +36,7 @@ public class Persoon {
         this.familienaam = familienaam;
     }
     
+    @Override
     public String toString(){
         return getFamilienaam().toUpperCase() + " " + getVoornaam().toLowerCase();
     }
