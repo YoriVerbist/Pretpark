@@ -19,10 +19,10 @@
         
 
         <div class="container">
-              <%Bezoeker bezoeker = (Bezoeker)request.getAttribute("bezoeker");
-            int pretparkcode = bezoeker.getPretparkcode();
-            if (pretparkcode == 1000) {
-                %><p>Welkom <%=bezoeker.toString()%>, danku om u te registreren.</p><%}
+              <%Bezoeker bezoeker = (Bezoeker)request.getAttribute("bezoeker");%>
+            <%int pretparkcode = bezoeker.getPretparkcode();%>
+            <%if (pretparkcode == 1000) {%>
+                <p>Welkom <%=bezoeker.toString()%>, danku om u te registreren.</p><%}
             else {
                 %><p>Welkom terug <%=bezoeker.toString()%>.</p><%
                 };
@@ -32,8 +32,8 @@
             if(!bezoeker.getWishlist().isEmpty()){
                 %><p>Uw favoriete attractie is <%=bezoeker.getWishlist().get(0)%>.</p><%}
             else{
-               %><p>Je hebt geen favoriete attractie gekozen.</p><%};
-            %>
+               %><p>Je hebt geen favoriete attractie gekozen.</p><%};%>
+            
             
             <button type="button" class="btn btn-outline-info"><a href="Formulier.jsp">Formulier</a></button>
             <button type="button" class="btn btn-outline-info"><a href="index.jsp">Home Pagina</a></button>

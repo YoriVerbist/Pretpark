@@ -16,6 +16,9 @@
         <div class="container">
         <h1>Formulier</h1>
         <form action="MaakServlet"> 
+            <p style="display: none;">
+                <input type="text" name="type" id="type" value="bezoeker">
+            </p>
             <div class="form-group"> 
                 <label for="voornaam">Voornaam</label> 
                 <input class="form-control" id="voornaam" placeholder="Elon" name="voornaam"> 

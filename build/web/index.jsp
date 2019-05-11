@@ -17,6 +17,7 @@
         <h1 class="">Welkom bij het pretpark Timmyland.</h1>
         <h2>Gemaakt door Yori Verbist</h2>
         <button type="button" class="btn btn-outline-info"><a href="Formulier.jsp">Formulier</a></button>
+        <button type="button" class="btn btn-outline-info"><a href="Pretpark.jsp">Nieuw pretpark</a></button>
         </div>
     </body>
 </html>

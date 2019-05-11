@@ -1,7 +1,7 @@
 <%-- 
-    Document   : index
-    Created on : May 10, 2019, 3:01:40 PM
-    Author     : Yori Verbist
+    Document   : Attractie
+    Created on : May 11, 2019, 3:45:49 PM
+    Author     : Yori
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -9,15 +9,12 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Timmyland</title>
+        <title>JSP Page</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     </head>
     <body>
         <div class="container">
-        <h1 class="">Welkom bij het pretpark Timmyland.</h1>
-        <h2>Gemaakt door Yori Verbist</h2>
-        <button type="button" class="btn btn-outline-info"><a href="Formulier.jsp">Formulier</a></button>
-        <button type="button" class="btn btn-outline-info"><a href="Pretpark.jsp">Nieuw pretpark</a></button>
+            <h1>Hello World!</h1>
         </div>
     </body>
 </html>

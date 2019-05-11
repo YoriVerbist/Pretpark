@@ -34,27 +34,29 @@ public class MaakServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        
+        String type = request.getParameter("type");
+        if(type.equals("bezoeker")){
         String voornaam = request.getParameter("voornaam");
         String achternaam = request.getParameter("achternaam");
         String nieuweBezoeker = request.getParameter("nieuwe_bezoeker");
         String attractie = request.getParameter("attractie");
         
-        Bezoeker bezoeker = new Bezoeker (voornaam, achternaam);
-        
-        if (nieuweBezoeker == null) {
-            bezoeker.setPretparkcode(1000);
+            Bezoeker bezoeker = new Bezoeker (voornaam, achternaam);
+
+            if (nieuweBezoeker == null) {
+                bezoeker.setPretparkcode(1000);
+            }
+
+            if (!attractie.equals("Geen")) {
+                bezoeker.voegToeAanWishlist(attractie);
+            }
+
+            RequestDispatcher rd = request.getRequestDispatcher("Verwelkoming.jsp");
+            request.setAttribute("bezoeker", bezoeker);
+            request.setAttribute("attractie", attractie);
+            rd.forward(request, response);
         }
-        
-        if (!attractie.equals("Geen")) {
-            bezoeker.voegToeAanWishlist(attractie);
-        }
-       
-        RequestDispatcher rd = request.getRequestDispatcher("Verwelkoming.jsp");
-        request.setAttribute("bezoeker", bezoeker);
-        request.setAttribute("attractie", attractie);
-        rd.forward(request, response);
-        
-     
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
