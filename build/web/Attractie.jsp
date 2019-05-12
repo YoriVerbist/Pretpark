@@ -25,7 +25,7 @@
                 </p>
                 <div class="form-group"> 
                     <label for="nieuwPretpark">Naam van het pretpark:</label> 
-                    <input class="form-control" id="nieuwPretpark" value="<%=nieuwPretpark %>" name="nieuwPretpark" readonly> 
+                    <input class="form-control" id="naamPretpark" value="<%=nieuwPretpark %>" name="naamPretpark" readonly> 
                 </div> 
                 <div class="form-group"> 
                     <label for="naamAttractie">Naam voor de attractie:</label> 
@@ -33,7 +33,7 @@
                 </div> 
                 <div class="form-group"> 
                     <label for="duurAttractie">Duur:</label> 
-                    <input class="form-control" type="number" min="1" max="20" id="duurAttractie" name="duurAttractie" placeholder="1"> 
+                    <input class="form-control" type="number" min="1" max="20" id="duurAttractie" name="duurAttractie" value="1"> 
                 </div> 
                 <div class="form-group"> 
                     <label for="naamFotoBestand">Fotot bestand </label> 

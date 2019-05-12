@@ -60,18 +60,27 @@ public class MaakServlet extends HttpServlet {
             rd.forward(request, response);
         }
         else if(type.equals("attractie")){
-            String nieuwPretpark = request.getParameter("nieuwPretpark");
+            //Haal info uit de forms
+            String naamPretpark = request.getParameter("naamPretpark");
             String naamAttractie = request.getParameter("naamAttractie");
             String duurAttractieString = request.getParameter("duurAttractie");
             String naamFotoBestand = request.getParameter("naamFotoBestand");
             long duurAttractie = Long.parseLong(duurAttractieString);
             
-            Pretpark pretpark = new Pretpark(nieuwPretpark);
+            //maak nieuwe objecten
+            Pretpark nieuwPretpark = new Pretpark(naamPretpark);
             Attractie attractie = new Attractie(naamAttractie, duurAttractie);
             attractie.setFoto(naamFotoBestand);
             
+            //4 attracties hardcoderen voor 3.3
+            Attractie attractie1 = new Attractie("Typhoon");
+            Attractie attractie2 = new Attractie("Sledge hammer");
+            Attractie attractie3 = new Attractie("Fury");
+            Attractie attractie4 = new Attractie("Dreamcather");
+            
             RequestDispatcher rd = request.getRequestDispatcher("OverzichtAttractie.jsp");
-            request.setAttribute("pretpark", pretpark);
+            request.setAttribute("pretpark", nieuwPretpark);
+            request.setAttribute("attractie", attractie);
             rd.forward(request, response);
         }
     }
