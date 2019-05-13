@@ -16,8 +16,9 @@
         <div class="container jumbotron">
         <h1>Project pretpark</h1>
         <h2>Gemaakt door Yori Verbist</h2>
-        <button type="button" class="btn btn-outline-info"><a href="Formulier.jsp">Formulier</a></button>
+        <button type="button" class="btn btn-outline-info"><a href="Formulier.jsp">Bezoeker</a></button>
         <button type="button" class="btn btn-outline-info"><a href="Pretpark.jsp">Nieuw pretpark</a></button>
+        <button type="button" class="btn btn-outline-info"><a href="Personeelslid.jsp">Nieuw personeelslid</a></button>
         </div>
     </body>
 </html>

@@ -4,6 +4,7 @@
     Author     : Yori
 --%>
 
+<%@page import="fact.it.www.beans.Attractie"%>
 <%@page import="fact.it.www.beans.Pretpark"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -15,10 +16,16 @@
     </head>
     <body>
         <% Pretpark nieuwPretpark = (Pretpark)request.getAttribute("nieuwPretpark"); %>
-        
-        
+
         <div class="container jumbotron">
             <h1>Overzicht van de attracties van pretpark <%=nieuwPretpark.getNaam() %></h1>
+            <hr>
+            <% for (Attractie attractie: nieuwPretpark.getAttracties()) { %>
+                <p>Naam attractie: <%=attractie.getNaam() %></p>
+                <p>Duur van de attractie: <%=attractie.getDuur() %></p>
+                <p>Foto van de attractie: <img src="./images/<%=attractie.getFoto() %>" onerror="this.src='./images/error.jpg'" width="400px" alt="<%= attractie.getNaam() %>"></p>
+                <hr>
+                <% } %>
             <button type="button" class="btn btn-outline-info"><a href="index.jsp">Home Pagina</a></button>
         </div>
         

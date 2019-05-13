@@ -27,10 +27,15 @@
                 <label for="achternaam">Achternaam</label> 
                 <input class="form-control" id="achternaam" placeholder="Musk" name="achternaam"> 
             </div> 
-            <div class="form-group form-check">
-                <input type="checkbox" class="form-check-input" id="nieuwe_bezoeker" name="nieuwe_bezoeker">
-              <label class="form-check-label" for="nieuwe_bezoeker">Ben je al eens in dit pretpark geweest?</label>
-            </div>
+            <% String[] parken = {"plopsa", "bobbejaanland", "walibi", "bellewaarde"}; %>
+            <% for (int i = 0; i < parken.length; i++) {%>
+                <div class="form-check">
+                <input class="form-check-input" type="radio" name="parken" id="parken" value="<%=parken[i]%>">
+                    <label class="form-check-label" for="<%=parken[i]%>">
+                      <%=parken[i]%>
+                    </label>
+              </div>
+                <% } %>
             <div class="from-group">
             <p>
                 <label class="form-check-label" for="attractie">Wat is je favoriete attractie?</label>
@@ -42,7 +47,8 @@
                 </select>
             </p>
             </div>
-            <button type="submit" class="btn btn-primary" name="verwelkoming">Submit</button>
+            <button type="submit" class="btn btn-primary" name="verwelkoming">Ga door als bezoeker zonder pretparkregistratie</button>
+            <button type="submit" class="btn btn-primary" name="dubbel">Registreer bezoeker en pretpark</button>
             
         </form>
         <button type="button" class="btn btn-outline-info"><a href="index.jsp">Home Pagina</a></button>

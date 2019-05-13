@@ -29,15 +29,15 @@
                 </div> 
                 <div class="form-group"> 
                     <label for="naamAttractie">Naam voor de attractie:</label> 
-                    <input class="form-control" id="naamAttractie" placeholder="Typhoon" name="naamAttractie"> 
+                    <input class="form-control" id="naamAttractie" placeholder="Typhoon" name="naamAttractie" required> 
                 </div> 
                 <div class="form-group"> 
                     <label for="duurAttractie">Duur:</label> 
                     <input class="form-control" type="number" min="1" max="20" id="duurAttractie" name="duurAttractie" value="1"> 
                 </div> 
                 <div class="form-group"> 
-                    <label for="naamFotoBestand">Fotot bestand </label> 
-                    <input class="form-control" id="naamFotoBestand" placeholder="Foto.jpg" name="naamFotoBestand"> 
+                    <label for="naamFotoBestand">Foto bestand </label> 
+                    <input class="form-control" id="naamFotoBestand" placeholder="Foto.jpg" name="naamFotoBestand" required> 
                 </div> 
 
 

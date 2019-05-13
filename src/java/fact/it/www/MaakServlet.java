@@ -7,6 +7,7 @@ package fact.it.www;
 
 import fact.it.www.beans.Attractie;
 import fact.it.www.beans.Bezoeker;
+import fact.it.www.beans.Personeelslid;
 import fact.it.www.beans.Pretpark;
 import java.io.IOException;
 import javax.servlet.RequestDispatcher;
@@ -46,9 +47,11 @@ public class MaakServlet extends HttpServlet {
         
             Bezoeker bezoeker = new Bezoeker (voornaam, achternaam);
 
+            /**
             if (nieuweBezoeker == null) {
                 bezoeker.setPretparkcode(1000);
             }
+            **/
 
             if (!attractie.equals("Geen")) {
                 bezoeker.voegToeAanWishlist(attractie);
@@ -71,16 +74,36 @@ public class MaakServlet extends HttpServlet {
             Pretpark nieuwPretpark = new Pretpark(naamPretpark);
             Attractie attractie = new Attractie(naamAttractie, duurAttractie);
             attractie.setFoto(naamFotoBestand);
+            nieuwPretpark.voegAttractieToe(attractie);
             
             //4 attracties hardcoderen voor 3.3
-            Attractie attractie1 = new Attractie("Typhoon");
-            Attractie attractie2 = new Attractie("Sledge hammer");
-            Attractie attractie3 = new Attractie("Fury");
-            Attractie attractie4 = new Attractie("Dreamcather");
+            Attractie attractie1 = new Attractie("Typhoon", 12);
+            Attractie attractie2 = new Attractie("Sledge hammer", 8);
+            Attractie attractie3 = new Attractie("Fury", 9);
+            Attractie attractie4 = new Attractie("Dreamcather", 6);
+            
+            nieuwPretpark.voegAttractieToe(attractie1);
+            nieuwPretpark.voegAttractieToe(attractie2);
+            nieuwPretpark.voegAttractieToe(attractie3);
+            nieuwPretpark.voegAttractieToe(attractie4);
+            
+            attractie1.setFoto("typhoon.jpg");
+            attractie2.setFoto("sledge_hammer.jpg");
+            attractie3.setFoto("fury.jpg");
             
             RequestDispatcher rd = request.getRequestDispatcher("OverzichtAttractie.jsp");
-            request.setAttribute("pretpark", nieuwPretpark);
+            request.setAttribute("nieuwPretpark", nieuwPretpark);
             request.setAttribute("attractie", attractie);
+            rd.forward(request, response);
+        }
+        else if (type.equals("personeelslid")){
+            String voorNaam = request.getParameter("voorNaam");
+            String achterNaam = request.getParameter("achterNaam");
+            
+            Personeelslid personeelslid = new Personeelslid(voorNaam, achterNaam);
+            
+            RequestDispatcher rd = request.getRequestDispatcher("WelkomPersoneelslid.jsp");
+            request.setAttribute("personeelslid", personeelslid);
             rd.forward(request, response);
         }
     }
