@@ -10,6 +10,7 @@ import fact.it.www.beans.Bezoeker;
 import fact.it.www.beans.Personeelslid;
 import fact.it.www.beans.Pretpark;
 import java.io.IOException;
+import java.util.ArrayList;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -42,22 +43,24 @@ public class MaakServlet extends HttpServlet {
         if(type.equals("bezoeker")){
             String voornaam = request.getParameter("voornaam");
             String achternaam = request.getParameter("achternaam");
-            String nieuweBezoeker = request.getParameter("nieuwe_bezoeker");
             String attractie = request.getParameter("attractie");
-        
+            RequestDispatcher rd = request.getRequestDispatcher("Verwelkoming.jsp");
+            
             Bezoeker bezoeker = new Bezoeker (voornaam, achternaam);
-
-            /**
-            if (nieuweBezoeker == null) {
-                bezoeker.setPretparkcode(1000);
-            }
-            **/
 
             if (!attractie.equals("Geen")) {
                 bezoeker.voegToeAanWishlist(attractie);
             }
+            
+            if (request.getParameter("dubbel") != null) {
+                String naamPretpark = request.getParameter("parken");
+                Pretpark pretpark = new Pretpark(naamPretpark);
+                pretpark.registreerBezoeker(bezoeker);
+                rd = request.getRequestDispatcher("VerwelkomingMetPretpark.jsp");
+                request.setAttribute("pretpark", pretpark);
+            }
 
-            RequestDispatcher rd = request.getRequestDispatcher("Verwelkoming.jsp");
+            
             request.setAttribute("bezoeker", bezoeker);
             request.setAttribute("attractie", attractie);
             rd.forward(request, response);
