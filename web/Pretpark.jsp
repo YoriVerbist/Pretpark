@@ -1,7 +1,8 @@
 <%-- 
     Document   : Pretpark
     Created on : May 11, 2019, 3:22:56 PM
-    Author     : Yori
+    Author     : Yori Verbist
+    r-nummer   : r0697651
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

@@ -2,6 +2,7 @@
     Document   : index
     Created on : May 10, 2019, 3:01:40 PM
     Author     : Yori Verbist
+    r-nummer   : r0697651
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -20,7 +21,6 @@
         <button type="button" class="btn btn-outline-info"><a href="Pretpark.jsp">Nieuw pretpark</a></button>
         <button type="button" class="btn btn-outline-info"><a href="Personeelslid.jsp">Nieuw personeelslid</a></button>
         <button type="button" class="btn btn-outline-info"><a href="OpvulServlet">Opvullen</a></button>
-       
         </div>
     </body>
 </html>

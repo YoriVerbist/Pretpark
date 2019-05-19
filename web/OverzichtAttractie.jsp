@@ -1,7 +1,8 @@
 <%-- 
     Document   : OverzichtAttractie
     Created on : May 11, 2019, 11:28:49 PM
-    Author     : Yori
+    Author     : Yori Verbist
+    r-nummer   : r0697651
 --%>
 
 <%@page import="fact.it.www.beans.Attractie"%>

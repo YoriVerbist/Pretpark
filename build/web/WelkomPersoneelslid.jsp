@@ -1,7 +1,8 @@
 <%-- 
     Document   : WelkomPersoneelslid
     Created on : 13-mei-2019, 9:56:05
-    Author     : yoriv
+    Author     : yori Verbist
+    r-nummer   : r0697651
 --%>
 
 <%@page import="fact.it.www.beans.Personeelslid"%>

@@ -1,7 +1,8 @@
 <%-- 
     Document   : Personeelslid
     Created on : 13-mei-2019, 9:43:44
-    Author     : yoriv
+    Author     : yori Verbist
+    r-nummer   : r0697651
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>

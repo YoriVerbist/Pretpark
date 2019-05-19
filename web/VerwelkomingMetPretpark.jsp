@@ -1,7 +1,8 @@
 <%-- 
     Document   : VerwelkomingMetPretpark
     Created on : May 13, 2019, 3:11:05 PM
-    Author     : Yori
+    Author     : Yori Verbist
+    r-nummer   : r0697651
 --%>
 
 <%@page import="fact.it.www.beans.Bezoeker"%>
