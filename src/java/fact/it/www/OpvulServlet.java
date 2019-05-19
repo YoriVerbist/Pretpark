@@ -12,11 +12,13 @@ import fact.it.www.beans.Pretpark;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.ArrayList;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -38,6 +40,7 @@ public class OpvulServlet extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
+        HttpSession session = request.getSession();
         //personen en bezoekers
          ArrayList<Personeelslid> personeelsleden = new ArrayList<>();
          personeelsleden.add(new Personeelslid("Jitse", "Verhaegen"));
@@ -84,6 +87,13 @@ public class OpvulServlet extends HttpServlet {
          pretparken.add(pretpark1);
          pretparken.add(pretpark2);
          pretparken.add(pretpark3);
+         
+        session.setAttribute("personeelsleden", personeelsleden);
+        session.setAttribute("bezoekers", bezoekers);
+        session.setAttribute("pretparken", pretparken);
+        RequestDispatcher rd = request.getRequestDispatcher("index.jsp");
+        rd.forward(request, response);    
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
