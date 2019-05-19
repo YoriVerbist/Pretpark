@@ -21,6 +21,8 @@
         <button type="button" class="btn btn-outline-info"><a href="Pretpark.jsp">Nieuw pretpark</a></button>
         <button type="button" class="btn btn-outline-info"><a href="Personeelslid.jsp">Nieuw personeelslid</a></button>
         <button type="button" class="btn btn-outline-info"><a href="OpvulServlet">Opvullen</a></button>
+        <button type="button" class="btn btn-outline-info"><a href="Bezoekers.jsp">Bezoekers tonen</a></button>
+        <button type="button" class="btn btn-outline-info"><a href="Pretparken.jsp">Pretparken tonen</a></button>
         </div>
     </body>
 </html>

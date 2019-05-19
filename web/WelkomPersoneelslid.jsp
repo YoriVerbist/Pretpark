@@ -5,6 +5,7 @@
     r-nummer   : r0697651
 --%>
 
+<%@page import="java.util.ArrayList"%>
 <%@page import="fact.it.www.beans.Personeelslid"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -17,10 +18,8 @@
     <body>
         <div class="container jumbotron">
             
-            <% Personeelslid personeelslid = (Personeelslid) request.getAttribute("personeelslid") ;%>
-            
-            <h1>Verwelkoming</h1>
-            <p><%=personeelslid.toString() %>, welkom bij het team.</p>
+            <%ArrayList<Personeelslid> personeelsleden = (ArrayList<Personeelslid>) session.getAttribute("personeelsleden");%>            
+           <p>Welkom <%=personeelsleden.get(personeelsleden.size()-1).toString()%></p>
         </div>
     </body>
 </html>

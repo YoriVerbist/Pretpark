@@ -17,6 +17,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 /**
  *
@@ -38,6 +39,8 @@ public class MaakServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
+        
+        HttpSession session = request.getSession();
         
         String type = request.getParameter("type");
         if(type.equals("bezoeker")){
@@ -105,8 +108,12 @@ public class MaakServlet extends HttpServlet {
             
             Personeelslid personeelslid = new Personeelslid(voorNaam, achterNaam);
             
+            //lijst maken
+            ArrayList<Personeelslid> personeelsleden = (ArrayList<Personeelslid>)session.getAttribute("personeelsleden");
+            personeelsleden.add(personeelslid);
+            
             RequestDispatcher rd = request.getRequestDispatcher("WelkomPersoneelslid.jsp");
-            request.setAttribute("personeelslid", personeelslid);
+            session.setAttribute("personeelslid", personeelslid);
             rd.forward(request, response);
         }
     }
