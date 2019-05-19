@@ -19,6 +19,8 @@
         <button type="button" class="btn btn-outline-info"><a href="Formulier.jsp">Bezoeker</a></button>
         <button type="button" class="btn btn-outline-info"><a href="Pretpark.jsp">Nieuw pretpark</a></button>
         <button type="button" class="btn btn-outline-info"><a href="Personeelslid.jsp">Nieuw personeelslid</a></button>
+        <button type="button" class="btn btn-outline-info"><a href="OpvulServlet">Opvullen</a></button>
+       
         </div>
     </body>
 </html>
